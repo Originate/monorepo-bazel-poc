@@ -6,6 +6,6 @@ package com.acme.shared;
 public class Hello {
 
   public static String greet() {
-    return "hello";
+    return "hello world";
   }
 }

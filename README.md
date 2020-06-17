@@ -8,7 +8,9 @@ This is a proof of concept of a mono-repo compiled by the [scalabel Bazel build 
 
 ### Compile everything
 
-...
+- compile the `com.acme.shared.Hello` library: `bazel build //src/com/acme/shared:hello`
+  - this creates `bazel-bin/src/com/acme/shared/libhello.jar`
+- compile everything: `bazel build //...`
 
 ### Start the server
 
