@@ -20,7 +20,7 @@ This is a proof of concept of a mono-repo compiled by the
 2. Compile a SpringBoot micro-service including all dependencies
 
    ```
-   bazel build //src/com/acme/web:Web
+   bazel build //src/com/acme/app1/service1:Service1
    ```
 
 3. compile everything:
@@ -36,7 +36,7 @@ To start over, run `bazel clean` to remove all build artifacts.
 Start the micro-service:
 
 ```
-bazel-bin/src/com/acme/web/Web
+bazel-bin/src/com/acme/app1/service1/Service1
 ```
 
 ### Change
@@ -54,16 +54,18 @@ bazel-bin/src/com/acme/web/Web
 
 ### Analyze
 
-What are the dependencies of the `//src/com/acme/web:Web` package:
+What are the dependencies of the `//src/com/acme/app1/service1:Service1`
+package:
 
 ```
-bazel query "deps(//src/com/acme/web:Web)" --output package
+bazel query "deps(//src/com/acme/app1/service1:Service1)" --output package
 ```
 
-Which folders need to be present to build the `//src/com/acme/web:Web` package:
+Which folders need to be present to build the
+`//src/com/acme/app1/service1:Service1` package:
 
 ```
-bazel query "buildfiles(deps(//src/com/acme/web:Web))" --output package
+bazel query "buildfiles(deps(//src/com/acme/app1/service1:Service1))" --output package
 
 src/com/acme/shared
 src/com/acme/web
@@ -81,12 +83,12 @@ bazel query 'kind("generated file", //src/com/acme/web:*)'
 //src/com/acme/web:Web-src.jar
 ```
 
-Which package contains the file `src/com/acme/web/Web.java`:
+Which package contains the file `src/com/acme/app1/service1/Service1.java`:
 
 ```
-bazel query src/com/acme/web/Web.java --output package
+bazel query src/com/acme/app1/service1/Service1.java --output package
 
-//src/com/acme/web
+//src/com/acme/app1/service1
 ```
 
 [more info](https://docs.bazel.build/versions/master/query-how-to.html)
