@@ -1,7 +1,7 @@
 package com.acme.web;
 
-import com.acme.shared.Hello;
-import com.acme.shared.Login;
+import com.acme.shared.hello.Hello;
+import com.acme.shared.login.Login;
 import java.io.IOException;
 import java.nio.charset.Charset;
 import java.nio.file.Files;
@@ -21,7 +21,7 @@ public class LoginController {
     return new String(file, Charset.forName("UTF-8"));
   }
 
-  @PostMapping(path="/login", consumes = "application/json")
+  @PostMapping(path = "/login", consumes = "application/json")
   public String postLogin(@RequestBody Map<String, String> body) {
     if (Login.checkCredentials(body.get("username"), body.get("password"))) {
       return Hello.greet(body.get("username"));

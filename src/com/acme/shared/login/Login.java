@@ -1,4 +1,4 @@
-package com.acme.shared;
+package com.acme.shared.login;
 
 public class Login {
   public static boolean checkCredentials(String username, String password) {
