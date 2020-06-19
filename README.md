@@ -23,4 +23,8 @@ This is a proof of concept of a mono-repo compiled by the [scalabel Bazel build 
 
 ### Maintain
 
-- fix all lint errors in Bazel BUILD files: `buildifier --lint=fix -warnings=native-java -r path/to/your/workspace/root/dir`
+To fix all lint errors in Bazel BUILD files:
+
+```
+buildifier --lint=fix -warnings=native-java -r path/to/your/workspace/root/dir
+```
