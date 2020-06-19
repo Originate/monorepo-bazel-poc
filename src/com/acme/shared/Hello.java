@@ -5,7 +5,7 @@ package com.acme.shared;
  */
 public class Hello {
 
-  public static String greet() {
-    return "hello";
+  public static String greet(String name) {
+    return "hello, " + name;
   }
 }

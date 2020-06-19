@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Bazel Demo</title>
+  </head>
+  <body>
+    <form method="post" action="/login">
+      <div>
+        <label>Username: <input name="username"></label>
+      </div>
+      <div>
+        <label>Password: <input name="password" type="password"></label>
+      </div>
+      <button>Log In</button>
+    </form>
+    <script>
+      document.querySelector("form").addEventListener("submit", async e => {
+        e.preventDefault();
+        const body = [...document.querySelectorAll("input")].reduce((acc, input) => ({ ...acc, [input.name]: input.value }), {});
+        const response = await fetch("/login", {
+          method: "post",
+          body: JSON.stringify(body),
+          headers: { "Content-Type": "application/json" },
+        });
+        alert(await response.text());
+      });
+    </script>
+  </body>
+</html>
