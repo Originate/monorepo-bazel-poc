@@ -25,10 +25,8 @@ This is a proof of concept of a mono-repo compiled by the
 
 ### Maintain
 
-To fix all lint errors in Bazel BUILD files, install the
-[Bazel build tools](https://github.com/bazelbuild/buildtools) (your IDE might do
-that for you).
+- install the [Bazel build tools](https://github.com/bazelbuild/buildtools)
+  (your IDE might do that for you)
+- fix all lint errors in Bazel BUILD files:
 
-```
-buildifier --lint=fix -warnings=native-java -r path/to/your/workspace/root/dir
-```
+      buildifier --lint=fix -warnings=native-java -r path/to/your/workspace/root/dir
