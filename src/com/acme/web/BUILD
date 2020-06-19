@@ -1,9 +1,4 @@
-# java_library(
-#     name = "spring_boot",
-#     exports = [
-#         "@maven//spring-boot",
-#     ],
-# )
+load("@rules_java//java:defs.bzl", "java_binary")
 
 java_binary(
     name = "Web",
