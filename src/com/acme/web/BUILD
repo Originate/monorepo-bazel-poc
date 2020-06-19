@@ -1,10 +1,3 @@
-# java_library(
-#     name = "spring_boot",
-#     exports = [
-#         "@maven//spring-boot",
-#     ],
-# )
-
 java_binary(
     name = "Web",
     srcs = glob(["*.java"]),
