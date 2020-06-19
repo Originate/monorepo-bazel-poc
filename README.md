@@ -23,7 +23,7 @@ This is a proof of concept of a mono-repo compiled by the [scalabel Bazel build 
 
 ### Maintain
 
-To fix all lint errors in Bazel BUILD files:
+To fix all lint errors in Bazel BUILD files, install the [Bazel build tools](https://github.com/bazelbuild/buildtools) (your IDE might do that for you).
 
 ```
 buildifier --lint=fix -warnings=native-java -r path/to/your/workspace/root/dir
