@@ -9,14 +9,35 @@ This is a proof of concept of a mono-repo compiled by the
 
 ### Compile
 
-- compile the `com.acme.shared.Hello` library:
-  `bazel build //src/com/acme/shared:hello`
-  - this creates `bazel-bin/src/com/acme/shared/libhello.jar`
-- compile everything: `bazel build //...`
+1. Compile a Java library:
+
+   ```
+   bazel build //src/com/acme/shared/hello
+   ```
+
+   This creates `bazel-bin/src/com/acme/shared/hello/libhello.jar`.
+
+2. Compile a SpringBoot micro-service including all dependencies
+
+   ```
+   bazel build //src/com/acme/web:Web
+   ```
+
+3. compile everything:
+
+   ```
+   bazel build //...
+   ```
+
+To start over, run `bazel clean` to remove all build artifacts.
 
 ### Run
 
-...
+Start the micro-service:
+
+```
+bazel-bin/src/com/acme/web/Web
+```
 
 ### Change
 
