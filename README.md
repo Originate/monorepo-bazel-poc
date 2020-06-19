@@ -22,3 +22,11 @@ This is a proof of concept of a mono-repo compiled by the
 
 - change the `com.acme.shared.Hello` method to return "Hello world"
 - see that it recompiles only this library
+
+### Maintain
+
+- install the [Bazel build tools](https://github.com/bazelbuild/buildtools)
+  (your IDE might do that for you)
+- fix all lint errors in Bazel BUILD files:
+
+      buildifier --lint=fix -warnings=native-java -r path/to/your/workspace/root/dir
