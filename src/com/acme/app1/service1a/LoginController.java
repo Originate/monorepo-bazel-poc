@@ -1,4 +1,4 @@
-package com.acme.app1.service1;
+package com.acme.app1.service1a;
 
 import com.acme.shared.hello.Hello;
 import com.acme.shared.login.Login;
