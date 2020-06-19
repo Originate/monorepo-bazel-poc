@@ -1,7 +1,7 @@
 load("@rules_java//java:defs.bzl", "java_binary")
 
 java_binary(
-    name = "App1",
+    name = "Service1",
     srcs = glob(["*.java"]),
     data = [
         "//src/frontend:index.html",
