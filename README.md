@@ -45,6 +45,12 @@ Run a single test with output:
 bazel run //test/com/acme/shared/hello:HelloTests
 ```
 
+Compile and test everything:
+
+```
+bazel query //... | xargs bazel test
+```
+
 ### Run
 
 Start the micro-service:
