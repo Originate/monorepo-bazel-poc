@@ -1,17 +1,3 @@
-load(":junit5.bzl", "junit_jupiter_java_repositories", "junit_platform_java_repositories")
-
-JUNIT_JUPITER_VERSION = "5.6.2"
-
-JUNIT_PLATFORM_VERSION = "1.6.2"
-
-junit_jupiter_java_repositories(
-    version = JUNIT_JUPITER_VERSION,
-)
-
-junit_platform_java_repositories(
-    version = JUNIT_PLATFORM_VERSION,
-)
-
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 
 RULES_JVM_EXTERNAL_TAG = "3.0"
@@ -37,4 +23,20 @@ maven_install(
     repositories = [
         "https://repo1.maven.org/maven2",
     ],
+)
+
+# JUNIT 5
+
+load(":junit5.bzl", "junit_jupiter_java_repositories", "junit_platform_java_repositories")
+
+JUNIT_JUPITER_VERSION = "5.6.2"
+
+JUNIT_PLATFORM_VERSION = "1.6.2"
+
+junit_jupiter_java_repositories(
+    version = JUNIT_JUPITER_VERSION,
+)
+
+junit_platform_java_repositories(
+    version = JUNIT_PLATFORM_VERSION,
 )
