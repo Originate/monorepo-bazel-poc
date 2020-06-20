@@ -31,6 +31,20 @@ This is a proof of concept of a mono-repo compiled by the
 
 To start over, run `bazel clean` to remove all build artifacts.
 
+### Test
+
+Run all tests:
+
+```
+bazel test //...
+```
+
+Run a single test with output:
+
+```
+bazel run //test/com/acme/shared/hello:HelloTests
+```
+
 ### Run
 
 Start the micro-service:
