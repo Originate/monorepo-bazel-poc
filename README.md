@@ -33,7 +33,7 @@ To start over, run `bazel clean` to remove all build artifacts.
 
 ### Test
 
-Run all tests:
+Compile and test everything:
 
 ```
 bazel test //...
