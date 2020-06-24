@@ -106,3 +106,18 @@ bazel query src/com/acme/app1/service1a/Service1a.java --output package
 ```
 
 [more info](https://docs.bazel.build/versions/master/query-how-to.html)
+
+### Docker
+
+Build the Docker image: 
+
+```
+docker build -t bazel-demo .
+```
+
+Run the Docker image:
+
+```
+contain bazel-demo 8080
+```
+
