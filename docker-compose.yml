@@ -1,0 +1,14 @@
+version: "3"
+services:
+  bazel:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    ports:
+      - 8080:8080
+    volumes:
+      - ./BUILD:/app/BUILD:ro
+      - ./WORKSPACE:/app/WORKSPACE:ro
+      - ./junit5.bzl:/app/junit5.bzl:ro
+      - ./src:/app/src:ro
+      - ./tools:/app/tools:ro

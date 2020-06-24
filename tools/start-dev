@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+set -e
+cd "$(dirname $0)/.."
+
+while true; do
+  echo "Building bazel"
+  if ! bazel build //...; then
+    echo "Bazel build failed, waiting for file change before continuing..."
+    inotifywait -r -e modify -e create -e delete .
+    continue
+  fi
+
+  echo "Starting app"
+  bazel-bin/src/com/acme/app1/service1a/Service1a &
+  PID=$!
+  inotifywait -r -e modify -e create -e delete .
+  kill "$PID"
+done

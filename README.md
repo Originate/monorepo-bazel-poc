@@ -106,3 +106,16 @@ bazel query src/com/acme/app1/service1a/Service1a.java --output package
 ```
 
 [more info](https://docs.bazel.build/versions/master/query-how-to.html)
+
+### Docker
+
+This project can be run with docker/docker-compose. This allows you to start up the application
+without needing java, bazel, node, and npm to be the correct version, or even installed on your system.
+
+To run this project with docker simply run
+```
+docker-compose up --build
+```
+
+The First build will download the dependencies and take some time, but after that builds should be as fast as non-docker builds.
+This setup will also monitor the filesystem for changes and use bazel to only re-build modified files on change.
