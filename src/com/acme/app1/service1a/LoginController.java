@@ -17,7 +17,7 @@ public class LoginController {
 
   @GetMapping("/login")
   public String getLogin() throws IOException {
-    byte[] file = Files.readAllBytes(Paths.get("src/frontend/index.html"));
+    byte[] file = Files.readAllBytes(Paths.get("src/com/acme/app1/frontend/index.html"));
     return new String(file, Charset.forName("UTF-8"));
   }
 
