@@ -50,6 +50,12 @@ bazel run //test/com/acme/shared/hello:HelloTests
 Start the micro-service:
 
 ```
+bazel run //src/com/acme/app1/service1a:Service1a
+```
+
+or
+
+```
 bazel-bin/src/com/acme/app1/service1a/Service1a
 ```
 
