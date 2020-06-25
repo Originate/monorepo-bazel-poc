@@ -4,7 +4,7 @@ java_binary(
     name = "Service1a",
     srcs = glob(["*.java"]),
     data = [
-        "//src/frontend:index.html",
+        "//src/com/acme/app1/frontend:index.html",
     ],
     deps = [
         "//src/com/acme/shared/hello",
