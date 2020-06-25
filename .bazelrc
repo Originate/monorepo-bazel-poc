@@ -1,0 +1,2 @@
+# By default, failing tests don't print any output, it goes to the log file
+test --test_output=errors
