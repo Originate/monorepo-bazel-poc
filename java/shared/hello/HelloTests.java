@@ -1,4 +1,4 @@
-package com.acme.shared.hello;
+package shared.hello;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 

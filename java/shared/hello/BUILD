@@ -13,6 +13,6 @@ java_junit5_test(
     srcs = ["HelloTests.java"],
     test_package = "com.acme.shared.hello",
     deps = [
-        "//src/com/acme/shared/hello",
+        "//java/shared/hello",
     ],
 )

@@ -1,4 +1,4 @@
-package com.acme.app1.service1a;
+package app1.service1a;
 
 import com.acme.shared.hello.Hello;
 import com.acme.shared.login.Login;
@@ -17,7 +17,7 @@ public class LoginController {
 
   @GetMapping("/login")
   public String getLogin() throws IOException {
-    byte[] file = Files.readAllBytes(Paths.get("src/com/acme/app1/frontend/index.html"));
+    byte[] file = Files.readAllBytes(Paths.get("java/app1/frontend/index.html"));
     return new String(file, Charset.forName("UTF-8"));
   }
 

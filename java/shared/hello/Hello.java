@@ -1,4 +1,4 @@
-package com.acme.shared.hello;
+package shared.hello;
 
 /**
  * The Hello library.
