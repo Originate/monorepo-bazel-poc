@@ -1,11 +1,4 @@
-# Scalable Build System POC
-
-This is a proof of concept of a mono-repo compiled by the
-[scalabel Bazel build system](https://bazel.build).
-
-### Install
-
-- clone this repo
+# Compiling Java using Bazel
 
 ### Compile
 
@@ -18,7 +11,7 @@ This is a proof of concept of a mono-repo compiled by the
    This creates
    <code textrun="file-exists">bazel-bin/shared/hello/libhello.jar</code>.
 
-2) Compile a SpringBoot micro-service including all dependencies
+2. Compile a SpringBoot micro-service including all dependencies
 
    <pre textrun="run-console-command">
    bazel build //app1/service1a:Service1a
