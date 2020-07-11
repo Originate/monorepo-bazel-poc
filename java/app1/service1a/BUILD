@@ -4,11 +4,12 @@ java_binary(
     name = "Service1a",
     srcs = glob(["*.java"]),
     data = [
-        "//java/app1/frontend:index.html",
+        "//app1/frontend:index.html",
     ],
+    main_class = "app.service1a.Service1a",
     deps = [
-        "//java/shared/hello",
-        "//java/shared/login",
+        "//shared/hello",
+        "//shared/login",
         "@maven//:org_springframework_boot_spring_boot",
         "@maven//:org_springframework_boot_spring_boot_autoconfigure",
         "@maven//:org_springframework_boot_spring_boot_starter_web",

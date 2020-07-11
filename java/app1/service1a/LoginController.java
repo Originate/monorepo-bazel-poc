@@ -1,7 +1,7 @@
 package app1.service1a;
 
-import com.acme.shared.hello.Hello;
-import com.acme.shared.login.Login;
+import shared.hello.Hello;
+import shared.login.Login;
 import java.io.IOException;
 import java.nio.charset.Charset;
 import java.nio.file.Files;
@@ -17,7 +17,7 @@ public class LoginController {
 
   @GetMapping("/login")
   public String getLogin() throws IOException {
-    byte[] file = Files.readAllBytes(Paths.get("java/app1/frontend/index.html"));
+    byte[] file = Files.readAllBytes(Paths.get("app1/frontend/index.html"));
     return new String(file, Charset.forName("UTF-8"));
   }
 

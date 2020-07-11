@@ -12,7 +12,7 @@ while true; do
   fi
 
   echo "Starting app"
-  bazel-bin/java/app1/service1a/Service1a &
+  bazel-bin/app1/service1a/Service1a &
   PID=$!
   inotifywait -r -e modify -e create -e delete .
   kill "$PID"
