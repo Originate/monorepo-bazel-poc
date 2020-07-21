@@ -1,4 +1,4 @@
-load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
+load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive", "http_jar")
 
 RULES_JVM_EXTERNAL_TAG = "3.0"
 
@@ -9,6 +9,66 @@ http_archive(
     sha256 = RULES_JVM_EXTERNAL_SHA,
     strip_prefix = "rules_jvm_external-%s" % RULES_JVM_EXTERNAL_TAG,
     url = "https://github.com/bazelbuild/rules_jvm_external/archive/%s.zip" % RULES_JVM_EXTERNAL_TAG,
+)
+
+http_jar(
+    name = "org_apiguardian_apiguardian_api",
+    sha256 = "1f58b77470d8d147a0538d515347dd322f49a83b9e884b8970051160464b65b3",
+    url = "https://repo1.maven.org/maven2/org/apiguardian/apiguardian-api/1.0.0/apiguardian-api-1.0.0.jar",
+)
+
+http_jar(
+    name = "org_opentest4j_opentest4j",
+    sha256 = "f106351abd941110226745ed103c85863b3f04e9fa82ddea1084639ae0c5336c",
+    url = "https://repo1.maven.org/maven2/org/opentest4j/opentest4j/1.1.1/opentest4j-1.1.1.jar",
+)
+
+http_jar(
+    name = "org_junit_platform_junit_platform_commons",
+    sha256 = "341621f4d998fd7b539b38baa7e1a3da80b7cac00b983e6206b01c9290915fe9",
+    url = "https://repo1.maven.org/maven2/org/junit/platform/junit-platform-commons/1.6.2/junit-platform-commons-1.6.2.jar",
+)
+
+http_jar(
+    name = "org_junit_platform_junit_platform_suite_api",
+    sha256 = "130bf4d60958e4345583e5804f4a2932c6b60832bf2bc797b9521ffe6c9acadc",
+    url = "https://repo1.maven.org/maven2/org/junit/platform/junit-platform-suite-api/1.6.2/junit-platform-suite-api-1.6.2.jar",
+)
+
+http_jar(
+    name = "org_junit_jupiter_junit_jupiter_engine",
+    sha256 = "0eb1ab3fc8e4130943b54f4d86824b106ef1cd90d96789343f3944e48b3c501c",
+    url = "https://repo1.maven.org/maven2/org/junit/jupiter/junit-jupiter-engine/5.6.2/junit-jupiter-engine-5.6.2.jar",
+)
+
+http_jar(
+    name = "org_junit_jupiter_junit_jupiter_params",
+    sha256 = "52f7aeb346cfa41bb33a8d3dbab8c577f9c37f8f5a79a632af10b5c8f1e92186",
+    url = "https://repo1.maven.org/maven2/org/junit/jupiter/junit-jupiter-params/5.6.2/junit-jupiter-params-5.6.2.jar",
+)
+
+http_jar(
+    name = "org_junit_platform_junit_platform_console",
+    sha256 = "2a2407737b147004642ee8e65618d51cc3895fe03b9c42f54b07d480ce6b7190",
+    url = "https://repo1.maven.org/maven2/org/junit/platform/junit-platform-console/1.6.2/junit-platform-console-1.6.2.jar",
+)
+
+http_jar(
+    name = "org_junit_platform_junit_platform_launcher",
+    sha256 = "d1ebfafa2bd87b05c7dce7249e1437a1c0e4f16af99d81f89c5a0c0d66dc1510",
+    url = "https://repo1.maven.org/maven2/org/junit/platform/junit-platform-launcher/1.6.2/junit-platform-launcher-1.6.2.jar",
+)
+
+http_jar(
+    name = "org_junit_jupiter_junit_jupiter_api",
+    sha256 = "3f476de9b214f20ca69da51e801186d001f67328a686df81bc3de3ba11953870",
+    url = "https://repo1.maven.org/maven2/org/junit/jupiter/junit-jupiter-api/5.6.2/junit-jupiter-api-5.6.2.jar",
+)
+
+http_jar(
+    name = "org_junit_platform_junit_platform_engine",
+    sha256 = "23b41ac95e4673f7b31e8502424451be4154fe4db1d448448945e2215473c246",
+    url = "https://repo1.maven.org/maven2/org/junit/platform/junit-platform-engine/1.6.2/junit-platform-engine-1.6.2.jar",
 )
 
 load("@rules_jvm_external//:defs.bzl", "maven_install")
