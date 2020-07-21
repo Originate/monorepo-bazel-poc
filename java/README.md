@@ -58,6 +58,20 @@ bazel-bin/app1/service1a/Service1a
 - change the `com.acme.shared.Hello` method to return "Hello world"
 - see that it recompiles only this library
 
+Bazel downloads the compilers it uses to compile and run source code as well as
+third-party dependencies the source code needs from the internet. This codebase
+configures Bazel to use an offline cache for these external dependencies. They
+are located in the [dist](dist/) directory. To add missing files, disable your
+internet connection and run:
+
+<pre textrun="run-console-command">
+bazel build --remote_timeout=1 --keep_going //...
+</pre>
+
+If Bazel is missing dependencies, it will print an error. Manually download all
+the missing dependencies and put them into the distdir. You also have to list
+them in the [WORKSPACE](WORKSPACE) file.
+
 ### Maintain
 
 - install the [Bazel build tools](https://github.com/bazelbuild/buildtools)
