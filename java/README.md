@@ -68,6 +68,12 @@ bazel-bin/app1/service1a/Service1a
 
 ### Analyze
 
+Which things can Bazel build:
+
+<pre textrun="run-console-command">
+bazel query '...' --output label_kind
+</pre>
+
 What are the dependencies of the `//app1/service1a:Service1a` package:
 
 <pre textrun="run-console-command">
