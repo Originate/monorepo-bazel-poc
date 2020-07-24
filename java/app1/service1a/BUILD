@@ -6,7 +6,7 @@ java_binary(
     data = [
         "//app1/frontend:index.html",
     ],
-    main_class = "app.service1a.Service1a",
+    main_class = "app1.service1a.Service1a",
     deps = [
         "//shared/hello",
         "//shared/login",
