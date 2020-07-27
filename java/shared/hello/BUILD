@@ -11,7 +11,7 @@ java_library(
 java_junit5_test(
     name = "HelloTests",
     srcs = ["HelloTests.java"],
-    test_package = "com.acme.shared.hello",
+    test_package = "shared.hello",
     deps = [
         "//shared/hello",
     ],
