@@ -55,7 +55,7 @@ bazel-bin/app1/service1a/Service1a
 
 ### Change
 
-- change the `com.acme.shared.Hello` method to return "Hello world"
+- change the `shared.Hello` method to return "Hello world"
 - see that it recompiles only this library
 
 Bazel downloads the compilers it uses to compile and run source code as well as
@@ -132,6 +132,20 @@ bazel query app1/service1a/Service1a.java --output package
 ```
 
 [more info](https://docs.bazel.build/versions/master/query-how-to.html)
+
+### Vendoring
+
+By default, Bazel fetches dependencies from the internet. You can vendor
+dependencies. This repo contains vendored dependencies in the [dist](dist/)
+folder. Bazel uses this folder automatically thanks to the settings in
+[.bazelrc](.bazelrc).
+
+These tasks work offline:
+
+```
+bazel build //shared/hello
+bazel run //shared/hello:HelloTests
+```
 
 ### Docker
 
