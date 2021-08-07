@@ -4,6 +4,6 @@
   "main": "index.js",
   "license": "MIT",
   "devDependencies": {
-    "text-runner": "4.0.3"
+    "text-runner": "5.0.0"
   }
 }

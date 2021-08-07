@@ -4,8 +4,8 @@
   "private": true,
   "devDependencies": {
     "@bazel/bazel": "latest",
-    "@bazel/ibazel": "latest",
-    "@bazel/buildifier": "latest"
+    "@bazel/buildifier": "4.0.1",
+    "@bazel/ibazel": "0.15.10"
   },
   "scripts": {
     "build": "bazel build //...",
@@ -13,12 +13,12 @@
     "serve": "ibazel run :server"
   },
   "dependencies": {
-    "@babel/cli": "^7.6.3",
-    "@babel/core": "^7.6.3",
-    "@babel/preset-env": "^7.6.3",
-    "domino": "^2.1.3",
-    "http-server": "^0.11.1",
-    "lite-server": "^2.5.4",
-    "mocha": "^6.2.1"
+    "@babel/cli": "^7.14.8",
+    "@babel/core": "^7.15.0",
+    "@babel/preset-env": "^7.15.0",
+    "domino": "^2.1.6",
+    "http-server": "^0.12.3",
+    "lite-server": "^2.6.1",
+    "mocha": "^9.0.3"
   }
 }
